@@ -9,26 +9,31 @@
     <Grid Background="SkyBlue">
         <GroupBox Header="Dane Pracownika" Margin="10,69,491,77">
             <StackPanel>
-                <Label Content="Imie:" Width="38" HorizontalAlignment="Left"></Label>
-                <TextBox x:Name="imietext" TextWrapping="Wrap" Text="" Width="120"/>
+                <Grid>
+                    <Label Content="Imie:" Width="38" HorizontalAlignment="Left" Margin="5,29,0,-29"></Label>
+                    <TextBox x:Name="imietext" TextWrapping="Wrap" Text="" Width="120" Margin="84,29,83,-29"/>
 
-                <Label Content="Nazwisko:" HorizontalAlignment="Left"></Label>
-                <TextBox x:Name="nazwiskotxt" TextWrapping="Wrap" Width="120"/>
-                <Label Content="Stanowisko:" HorizontalAlignment="Left"></Label>
-                <ComboBox x:Name="combobox" Width="120">
-                    <ComboBoxItem Content="Kierownik"/>
-                    <ComboBoxItem Content="Starszy programista"/>
-                    <ComboBoxItem Content="Mlodszy programista"/>
-                    <ComboBoxItem Content="Tester"/>
-                </ComboBox>
-
+                    <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="5,78,0,-78"></Label>
+                    <TextBox x:Name="nazwiskotxt" TextWrapping="Wrap" Width="120" Margin="84,78,83,-78"/>
+                    <Label Content="Stanowisko:" HorizontalAlignment="Left" Margin="7,125,0,-123"></Label>
+                    <ComboBox x:Name="combobox" Width="120" Margin="84,129,83,-129">
+                        <ComboBoxItem Content="Kierownik"/>
+                        <ComboBoxItem Content="Starszy programista"/>
+                        <ComboBoxItem Content="Mlodszy programista"/>
+                        <ComboBoxItem Content="Tester"/>
+                    </ComboBox>
+                </Grid>
             </StackPanel>
 
         </GroupBox>
         <GroupBox Header="Generowanie Hasła" Margin="421,69,36,77">
             <StackPanel>
+
                 <Label Content="Ile znakow?" HorizontalAlignment="Left"></Label>
-                <TextBox x:Name="ileznakowtxt" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Grid>
+
+                    <TextBox x:Name="ileznakowtxt" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,-23,0,0"/>
+                </Grid>
                 <CheckBox x:Name="literycheck" Content="Male i duze Litery"/>
                 <CheckBox x:Name="cyfrycheck" Content="Cyfry"/>
                 <CheckBox x:Name="znakicheck" Content="Znaki specjalne"/>
@@ -36,6 +41,7 @@
 
             </StackPanel>
         </GroupBox>
+        <Button x:Name="koniecbtn" Content="Zatwierdź" HorizontalAlignment="Left" Margin="300,371,0,0" VerticalAlignment="Top" Height="27" Width="123" Click="Button_Click"/>
 
     </Grid>
 </Window>
